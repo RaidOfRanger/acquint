@@ -1,0 +1,16 @@
+<div class="sticky-header " >
+    <mat-toolbar class="container" >
+        <div class="sbar">
+            <input type="text" [(ngModel)]="searchtext" (input)="searchtra()" class="search" placeholder="search" />
+            <mat-icon class="icon">search</mat-icon>
+        </div>
+        <div >
+            <ul class="menu-list">
+                <li><a routerLink="">Home</a></li>
+                <li><a routerLink="add-product">Add Product</a></li>
+                <li><a (click)="logout()">log-out</a></li>
+            </ul>
+            
+        </div>
+    </mat-toolbar>
+</div>

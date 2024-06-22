@@ -1,0 +1,30 @@
+<div class="container">
+    <h2 class="page-title">Product List</h2>
+    <div class="scorllcard">
+        <mat-grid-list class="card-list " [cols]="getGridColumns()" rowHeight="350px" gutterSize="10px">
+            <mat-grid-tile *ngFor="let product of productList | search: searchtext">
+                <div >
+                    <mat-card>
+                        <mat-card-header>
+                            <div mat-card-avatar class="example-header-image"></div>
+                            <mat-card-title>{{product.Name}}</mat-card-title>
+                            <mat-card-subtitle>{{product.price}}</mat-card-subtitle>
+                          </mat-card-header>
+                          <div class="img-box">
+                            <img mat-card-lg-image src="{{product.image}}" alt="">
+                          </div>
+                          
+                          <mat-card-content>
+                            <p>{{product.status}}</p>
+                          </mat-card-content>
+                          <mat-card-actions>
+                            <mat-icon (click)="editcard(product)" [ariaDisabled]="product.owner == current_owner">edit</mat-icon>
+                            <mat-icon (click)="deletecard(product)" [ariaDisabled]="product.owner == current_owner">delete</mat-icon>
+                          </mat-card-actions>
+                    </mat-card>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+    
+</div>

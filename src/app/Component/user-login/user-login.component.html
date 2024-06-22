@@ -1,0 +1,40 @@
+<p>user-login works!</p>
+
+<div>
+    <div *ngIf="!regtolog">
+        <h1 class="page-title">Register New User</h1>
+        <form class="container" [formGroup]="loginform" (ngSubmit)="OnSubmituserSignup()">
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Enter your Name" formControlName="name" type="text">
+            </mat-form-field><br><br>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Enter your Email" formControlName="email" type="text">
+            </mat-form-field><br><br>
+            <mat-form-field>
+                <mat-label>Enter your Password</mat-label>
+                <input matInput placeholder="Enter your Password" formControlName="password" type="password">
+            </mat-form-field>
+            <a class="label" (click)="switchTouserLogin()">Already have an account ?</a><br>
+            <button mat-raised-button type="submit">submit</button>
+
+        </form>
+    </div>
+</div>
+<div *ngIf="regtolog">
+    <h1 class="page-title">Login User</h1>
+    <form class="container" [formGroup]="loginform1" (ngSubmit)="OnSubmituserLogin()" >
+        <mat-form-field>
+            <br>
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Enter your Email" formControlName="email" type="text">
+        </mat-form-field><br>
+        <mat-form-field>
+            <mat-label>Enter your Password</mat-label>
+            <input matInput placeholder="Enter your Password" formControlName="password" type="password">
+        </mat-form-field><br>
+        <a class="label" (click)="switchTouserReg()">New User ?</a><br>
+        <button mat-raised-button type="submit">submit</button>
+    </form>
+</div>

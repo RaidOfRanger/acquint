@@ -1,0 +1,11 @@
+.exmaple-card{
+    width: 400px;
+    height: 700px;
+}
+
+.img-box{
+    padding-left: 20px;
+    padding-right: 10px;
+    width: fit-content;
+    height: fit-content;
+}

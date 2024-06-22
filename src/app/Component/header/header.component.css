@@ -1,0 +1,84 @@
+.example-spacer {
+    display: flex;
+    justify-content: space-between;
+}
+
+div h1 {
+    color: brown;
+    margin: 0;
+    font-size: 2px;
+    padding-left: 1%;
+
+}
+
+.container h1 {
+    font-size: 25px;
+}
+
+
+.menu-list {
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: small;
+}
+
+.menu-list li a {
+    padding-left: 8px;
+    padding-top: 10px;
+    color: rgb(242, 162, 82);
+    text-decoration: none;
+}
+
+.container {
+    background-color: #000000;
+    justify-content: space-between;
+    display: flex;
+    margin-right: 10%;
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.search {
+    border-radius: 20px;
+    width: 100%;
+    height: 30px;
+}
+
+.icon {
+    padding-left: 2%;
+}
+
+.sbar {
+    display: flex;
+    width: 55%;
+}
+
+.sticky-header {
+    
+    /* padding-top: 102px; */
+    position:fixed;
+    top: 0;
+    width: 100%;
+    padding-bottom: 1%;
+    z-index: 1000;
+}
+
+.mat-toolbar {
+    position: relative;
+}
+
+/* Optional: Add shadow for a raised effect */
+.mat-elevation-z2 {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fixed {
+    position: relative;
+    width: 100%;
+    
+    top: 0px;
+}
+

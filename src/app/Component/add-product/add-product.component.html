@@ -1,0 +1,62 @@
+<p>add-product works!</p>
+<div class="spacer">
+    <div class="block">
+        <h1 class="page-title">Add Product</h1>
+        <form class="container" [formGroup]="AddProductform" (ngSubmit)="OnAddProduct()">
+            <mat-form-field>
+                <mat-label>Product Name</mat-label>
+                <input matInput placeholder="Enter Product Name" formControlName="Name" type="text">
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-label>Image</mat-label>
+                <input matInput placeholder="Image" formControlName="image" type="text">
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-label>product_code</mat-label>
+                <input matInput placeholder="product_code" formControlName="product_code" type="Number">
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-label>price</mat-label>
+                <input matInput placeholder="price" formControlName="price" type="Number">
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-label>category</mat-label>
+                
+                <mat-select matNativeControl formControlName="category" required>
+                    <mat-option value="electronics">electronics</mat-option>
+                    <mat-option value="Mobiles">Mobiles</mat-option>
+                    <mat-option value="watches">watches</mat-option>
+                  </mat-select>
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-label>manufacture_date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="manufacture_date">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker">
+                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                  </mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>expiry_date</mat-label>
+                <input matInput [matDatepicker]="picker2" formControlName="expiry_date">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker2">
+                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                  </mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>            
+            </mat-form-field>
+            
+            <mat-form-field>
+                <mat-label>status</mat-label>
+                <mat-select matNativeControl formControlName="status"  required>
+                    <mat-option value="available">available</mat-option>
+                    <mat-option value="not available">not available</mat-option>
+                  </mat-select>
+                </mat-form-field>
+            
+            <button mat-raised-button class="btn-style" type="submit">Add Product</button><br>
+    
+        </form>
+    </div>
+    </div>
